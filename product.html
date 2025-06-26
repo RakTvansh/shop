@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <style>
+    .scroll-content {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 10px;
+    }
+    .scroll-content img {
+      height: 200px;
+      border-radius: 8px;
+    }
+    .product-name {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Image Scroll Section -->
+  <div class="scroll-content" id="scrollContent"></div>
+
+  <!-- Product Name -->
+  <div class="product-name" id="product-name">Loading...</div>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = parseInt(urlParams.get("id"));
+    const product = products.find(p => p.id === productId);
+
+    if (product) {
+      // Update product name
+      document.getElementById("product-name").textContent = product.name;
+
+      // Update scrolling images (4 same for now)
+      const scrollContent = document.getElementById("scrollContent");
+      scrollContent.innerHTML = `
+        <img src="${product.image}" />
+        <img src="${product.image}" />
+        <img src="${product.image}" />
+        <img src="${product.image}" />
+      `;
+    } else {
+      document.getElementById("product-name").textContent = "Product not found";
+    }
+  </script>
+</body>
+</html>

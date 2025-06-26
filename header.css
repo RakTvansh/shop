@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+.header{
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+}
+.menu{
+    width: 30px;
+    display: flex;
+    height: 22.5px;
+    padding-block: 1px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menupart{
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+    background-color: black;
+    box-shadow:
+        1px 1px 4px rgba(0, 0, 0, 0.2),
+        1px 1px 8px rgba(0, 0, 0, 0.2);
+}
+.menu:hover .menupart{
+    scale: 0.9;
+    box-shadow: 1px 1px 2px grey;
+}
+.menu:hover #menupartmiddle{
+    width: 75%;
+}
+.menu:hover:active{
+    scale: 0.7;
+    transition: 0.3s ease;
+}
+.name{
+    font-weight: 600;
+    pointer-events: none;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+.navs{
+    width: 135px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+}.navs {
+    width: 135px;
+    height: 35px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+.searchbox {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow: visible;
+    transition: 0.3s ease;
+}
+.search {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/search.png);
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.searchtext {
+    position: absolute;
+    left: -100px;
+    width: 0;
+    opacity: 0;
+    height: 25px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+    background: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+.searchbox:hover{
+    scale: 1.05;
+}
+.searchbox:hover .search{
+    filter: drop-shadow(0px 0px 1px black);
+}
+/* Active state */
+.searchbox.active .searchtext {
+    width: 90px;
+    opacity: 1;
+    pointer-events: all;
+}
+.profile{
+    width: 35px;
+    height: 35px;
+    background-size: 90%;
+    transition: 0.3s ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/profile.png);
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.4));
+}
+.profile:hover{
+    scale: 1.05;
+}
+.profile:active{
+    scale: 0.5;
+}
+.cart{
+    width: 35px;
+    height: 35px;
+    background-size: 80%;
+    transition: 0.3s ease;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/paperbag.png);
+    filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.5));
+}
+.cart:hover{
+    scale: 1.05;
+}
+.cart:active{
+    scale: 0.5;
+}

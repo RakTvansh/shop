@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="menubar.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="items.css">
+    <link rel="stylesheet" href="test.css">
+    <title>RakTvansh</title>
+</head>
+<body>
+    <div class="header">
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-item">🏠 Home</div>
+                <div class="sidebar-item">🛍️ Categories</div>
+                <div class="sidebar-item">📦 Orders</div>
+                <div class="sidebar-bottom">
+                    <button class="sidebar-btn" onclick="window.location.href='login.html'">🔒 Login / ✍️ Sign Up</button>
+                    <div class="sidebar-item">📍 Track Order</div>
+                    <div class="sidebar-item contact-us">📞 Contact Us</div>
+                </div>
+            </div>
+        </div>
+        <div class="menu" id="menuToggle">
+            <div class="menupart"></div>
+            <div id="menupartmiddle" class="menupart"></div>
+            <div class="menupart"></div>
+        </div>
+        <div class="name">RakTvansh &trade;</div>
+        <div class="navs">
+            <div class="searchbox" id="searchbox">
+                <div class="search" id="searchicon"></div>
+                <input type="text" class="searchtext" placeholder="Search"></input>
+            </div>
+            <div class="profile"></div>
+            <div class="cart"></div>
+        </div>
+    </div>
+    <div class="category"></div>
+    <div class="scroll-container" id="scrollContainer">
+        <div class="scroll-content" id="scrollContent">
+            <!-- One set of 4-8 images -->
+            <div class="image-set">
+                <img src="images/1.png"/>
+                <img src="images/2.png"/>
+                <img src="images/3.png"/>
+                <img src="images/4.png"/>
+                <img src="images/5.png"/>
+                <img src="images/6.png"/>
+                <img src="images/7.png"/>
+                <img src="images/8.png"/>
+            </div>
+            <!-- Clone of the above set (for seamless loop) -->
+            <div class="image-set">
+                <img src="images/1.png"/>
+                <img src="images/2.png"/>
+                <img src="images/3.png"/>
+                <img src="images/4.png"/>
+                <img src="images/5.png"/>
+                <img src="images/6.png"/>
+                <img src="images/7.png"/>
+                <img src="images/8.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="fullscreen-view" id="fullscreenView">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <img id="fullscreenImg" alt="Full Image Preview" />
+    </div>
+    <div class="text-icon-row">
+        <p class="text" id="product-name">
+            Unisex Regular Fit
+        </p>
+        <div class="icon">
+            <img src="images/cart.png" alt="Cart" />
+            <div class="cart-count" id="cartCount">0</div>
+        </div>
+    </div>
+    <div class="portrait-grid">
+        <img src="images/lightwell.jpg" data-name="Dark Skull Tee" alt="Portrait 1"/>
+        <img src="images/@email.png" data-name="Cyber Samurai Tee" alt="Portrait 2"/>
+        <img src="images/blender.png" data-name="Neon Reaper Tee" alt="Portrait 3"/>
+        <img src="images/boltcyan.png" data-name="Glitch Ronin Tee" alt="Portrait 4"/>
+        <img src="images/coding browser.png" data-name="Blade Circuit Tee" alt="Portrait 5"/>
+        <img src="images/c.png" data-name="Ghost Tech Tee" alt="Portrait 6"/>
+        <img src="images/cart.png" data-name="Mecha Warrior Tee" alt="Portrait 7"/>
+        <img src="images/cloudcyan.png" data-name="Void Skull Tee" alt="Portrait 8"/>
+        <img src="images/css.png" data-name="Shadow Core Tee" alt="Portrait 9"/>
+        <img src="images/terminal.png" data-name="Neo Samurai Tee" alt="Portrait 10"/>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="test.js"></script>
+    <script src="search.js"></script>
+    <script src="menubar.js"></script>
+    <script src="add2cart.js"></script>
+    <script src="imgpopup.js"></script>
+    <script src="picscroll.js"></script>
+    <script src="changeitem.js"></script>
+</body>
+</html>
